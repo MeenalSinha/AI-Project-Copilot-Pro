@@ -1,0 +1,39 @@
+# AI Project Copilot Pro - App Engine Flexible Deployment
+runtime: custom
+env: flex
+
+service: ai-copilot-pro
+
+instance_class: F2
+
+automatic_scaling:
+  min_num_instances: 0
+  max_num_instances: 2
+  cool_down_period_sec: 180
+  cpu_utilization:
+    target_utilization: 0.65
+
+resources:
+  cpu: 1
+  memory_gb: 2
+  disk_size_gb: 10
+
+# Secure: never hardcode secrets
+env_variables:
+  PYTHONUNBUFFERED: "1"
+
+# Health checks — Streamlit must respond 200 on "/"
+liveness_check:
+  path: "/"
+  check_interval_sec: 30
+  timeout_sec: 10
+  failure_threshold: 3
+  success_threshold: 1
+
+readiness_check:
+  path: "/"
+  check_interval_sec: 10
+  timeout_sec: 10
+  failure_threshold: 3
+  success_threshold: 1
+  app_start_timeout_sec: 300

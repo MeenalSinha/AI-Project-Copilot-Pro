@@ -1,0 +1,29 @@
+# =====================================
+# AI Project Copilot Pro - Requirements
+# For: streamlit_app + agent_system + fastapi_app
+# =====================================
+
+# Core AI & API
+google-genai
+python-dotenv
+pyyaml
+
+# Backend API (FastAPI)
+fastapi
+uvicorn[standard]
+pydantic
+
+# Frontend (Streamlit)
+streamlit
+pandas
+plotly
+
+# Document Generation
+python-pptx
+reportlab
+python-docx
+
+# Additional utilities
+requests
+aiohttp
+scikit-learn

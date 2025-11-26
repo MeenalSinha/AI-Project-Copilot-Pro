@@ -1,0 +1,60 @@
+# AI Project Copilot Pro - Production Configuration
+
+# =============================
+# MODEL SETTINGS
+# =============================
+primary_model: "gemini-2.0-flash-001"
+fallback_model: "gemini-1.5-pro-002"
+temperature: 0.7
+max_tokens: 4096  # Prevents runaway costs
+
+# =============================
+# AGENT SETTINGS
+# =============================
+max_retries: 3
+evaluation_threshold: 0.85  # Raised for higher quality
+enable_evaluation: true
+enable_mcp: false  # Planned for future - MCP tool integration
+
+# =============================
+# MEMORY SETTINGS
+# =============================
+session_ttl_hours: 24
+memory_max_entries: 100
+memory_file: "data/memory_bank.json"
+
+# =============================
+# DEPLOYMENT SETTINGS
+# =============================
+data_dir: "data"
+output_dir: "outputs"
+trace_dir: "traces"
+log_dir: "logs"
+
+# =============================
+# LOGGING & OBSERVABILITY
+# =============================
+log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+enable_logging: true
+log_file: "logs/app.log"
+
+# =============================
+# API SETTINGS
+# =============================
+api_timeout: 60  # Seconds before timeout
+api_max_retries: 3
+
+# =============================
+# ASYNC & PERFORMANCE
+# =============================
+async_timeout: 300
+enable_async: true
+parallel_agents: true  # Enable parallel execution
+max_concurrent_agents: 5
+
+# =============================
+# FEATURE FLAGS
+# =============================
+enable_a2a_logging: true  # Log agent-to-agent messages
+enable_metrics_export: false  # Disable heavy metrics for competition
+enable_debug_mode: false  # Production mode

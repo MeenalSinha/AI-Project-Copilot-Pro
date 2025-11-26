@@ -1,0 +1,92 @@
+# =============================
+# PYTHON
+# =============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.log
+
+# Virtual environments
+venv/
+.env/
+.envrc
+*.env
+*.dotenv
+
+# =============================
+# STREAMLIT / FASTAPI / APP DATA
+# =============================
+
+# App-generated data
+data/
+logs/
+outputs/
+traces/
+api_data/
+sessions/
+
+# Export files (generated - but keep documentation!)
+*.pptx
+*.docx
+*.pdf
+*.json.backup
+
+# =============================
+# DOCKER / CONTAINER BUILD
+# =============================
+docker-data/
+docker-cache/
+cache/
+build/
+dist/
+
+# =============================
+# IDE / EDITOR FILES
+# =============================
+.vscode/
+.vscode-server/
+.idea/
+*.iml
+*.code-workspace
+
+# Jupyter / Colab
+.ipynb_checkpoints/
+*.ipynb
+
+# =============================
+# OS FILES
+# =============================
+.DS_Store
+Thumbs.db
+
+# =============================
+# SECRETS & CREDENTIALS
+# =============================
+# CRITICAL: Never commit these!
+credentials.json
+service-account.json
+secrets/
+.key
+*.pem
+*.crt
+*secret*
+*password*
+*token*
+
+# =============================
+# BACKEND RUNTIME
+# =============================
+**/cache/**
+*.pickle
+*.db
+*.sqlite
+*.sqlite3
+
+# =============================
+# GIT
+# =============================
+.git/
+.gitattributes

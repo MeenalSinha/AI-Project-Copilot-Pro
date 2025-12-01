@@ -1822,6 +1822,7 @@ def main():
             st.caption(f"+ {len(past_sessions) - 5} more project(s) in history")
     
     st.markdown("<h1 style='text-align: center;'>🎯 AI Copilot Pro</h1>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: #666; font-size: 1.1em;'>AI that turns your goal into a complete project plan you can execute.</p>", unsafe_allow_html=True)
     
     goal = st.text_area("🎯 Project Goal", height=100, 
                        placeholder="Example: Launch a SaaS product for fitness tracking...")

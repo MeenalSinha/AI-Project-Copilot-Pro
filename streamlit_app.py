@@ -1821,8 +1821,7 @@ def main():
         if len(past_sessions) > 5:
             st.caption(f"+ {len(past_sessions) - 5} more project(s) in history")
     
-    st.title("🎯 AI Project Copilot Pro - Enhanced Complete")
-    st.markdown("### 🏆 All Fixes + All Features = Guaranteed #1")
+    st.markdown("<h1 style='text-align: center;'>🎯 AI Copilot Pro</h1>", unsafe_allow_html=True)
     
     goal = st.text_area("🎯 Project Goal", height=100, 
                        placeholder="Example: Launch a SaaS product for fitness tracking...")
